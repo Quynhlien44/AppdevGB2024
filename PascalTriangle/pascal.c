@@ -5,18 +5,25 @@ void pascal_triangle(int rows) {
 	int n, k;
 	
 	clearScreen();
+	gotoXY(1, 35);
+	setBGcolor(CYAN);
+	printf("--Pascal Triangle--");
+	resetColors();
+
 	for (n = 0; n < rows; n++) {
-		gotoXY(n + 1, 40 - n * 2);
-		setFGcolor(RED + n);
+		gotoXY(n + 2, 40 - n * 3);
+		setFGcolor(RED + n%7);
+
 		for (k = 0; k <= n; k++) {
-		//	printf("%d ", nchoosek(n, k)); 
-			printf("%4d ", binomial(n, k));
+			printf("%6d ", nchoosek(n, k)); 
+			//printf("%6d ", binomial(n, k));
 		}
 		printf("\n");
 	}
+	resetColors();
 }
 
-int binomial(int n, int k) {
+int nchoosek(int n, int k) {
 	//return factor(n) / factor(k) / factor(n - k);
 	return factorial(n) / factorial(k) / factorial(n - k);
 }

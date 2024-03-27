@@ -8,6 +8,6 @@ int main(void) {
 	printf("Welcom to Pascal\n");
 	printf("Enter the number of rows of Pascal Triangle: ");
 	scanf("%d", &rows);
-	clearScreen();
+	
 	pascal_triangle(rows);
 }
