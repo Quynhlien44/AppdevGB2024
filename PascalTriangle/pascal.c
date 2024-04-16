@@ -24,7 +24,6 @@ void pascal_triangle(int rows) {
 }
 
 int nchoosek(int n, int k) {
-	//return factor(n) / factor(k) / factor(n - k);
 	return factorial(n) / factorial(k) / factorial(n - k);
 }
 
